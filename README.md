@@ -15,16 +15,7 @@
 
  
 ## What is next for this project
-- co-op
-- Mobile integration
-- More skins and customizations to both the player ship and the debris
-- Animation  
-- more game modes 
-- Nicer display using CSS
-- Optimizing our functions
-- Adapting the game to be played on mobile
-- Finishing the highscores, including the imputed names 
-- Adding in different themes for the ship and the debris
-- Different game modes such as two player local and online
-- Adding in special events that can occur at random while playing the game
- the game
+- Local and online Co-op modes
+- Develop an iOS app version of the game 
+- Gameplay animations
+- More cosmetics
