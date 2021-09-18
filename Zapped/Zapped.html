@@ -1,0 +1,42 @@
+<!--Connect everything together-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>My Game</title>
+		<link href='/~/projects/Space_Arcade/styles.css' rel='stylesheet'>
+		<script src="/~/projects/Space_Arcade/script.js"></script>
+		<script>
+			window.isLoggedIn = !!'{{username}}';
+			window.playername = '{{username}}' || localStorage.getItem('playername');
+		</script>
+	</head>
+
+	<body>
+		<!--Setting Canvas parameters-->
+		<div class='center'>
+			<canvas id="myCanvas" width="600px" height="800px"></canvas>
+		</div>
+
+		<!--Connection to the starting screen-->
+		<div class='right'>
+			<a href="/~/projects/Space_Arcade/Zapped/Zapped_Instructions">
+				<button>Instructions</button>
+			</a>
+			<a href="/~/projects/Space_Arcade/Zapped/Zapped_Leaderboard">
+				<button>Leaderboard</button>
+			</a>
+			<a href="/~/projects/Space_Arcade/Shop">
+				<button>Shop</button>
+			</a>
+			<a href="/~/projects/Space_Arcade/Game_Menu">
+				<button>Game Menu</button>
+			</a>
+
+		</div>
+
+		<script src="Zapped.js"></script>
+	</body>
+
+</html>

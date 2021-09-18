@@ -1,0 +1,49 @@
+<!--Leaderboard html-->
+<!--NOTE: THIS FEAUTURE IS STILL UNDER DEVELOPMENT AND THE DISPLAYED VALUES ARE JUST PLACE HOLDERS-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!--Set parameters-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='/~/projects/Space_Arcade/styles.css' rel='stylesheet'>
+		<script src='/~/projects/Space_Arcade/script.js'></script>
+		<script>
+			window.playername = '{{username}}' || localStorage.getItem('playername');
+		</script>
+		<!--Title-->
+		<title>Space Race Leader Board</title>
+	</head>
+
+	<body onload='getSpaceRaceLeaders()'>
+		<!--Displayed Title-->
+		<h1>Space Race Leader Board</h1>
+		<hr style="width:30%", size="2", color=white>  
+
+<br> 
+		<!--Display all of the highscores-->
+		<div class='center' id='leaders'>
+		</div>
+
+
+
+		<!--Link to the start screen-->
+		<div class="middle">
+				<!--Link to the game-->
+				<a href="/~/Space_Race/Game_Menu">
+					<button id="play">Play</button>
+				</a>
+	
+				<!--Link to the instructions-->
+				<a href="/~/projects/Space_Arcade/Controls">
+					<button>Controls</button>
+				</a>
+	
+				<!--Link to the leaderboard-->
+				<a href="/~/projects/Space_Arcade/Start_Screen">
+					<button>Home</button>
+				</a>
+			</div>
+	</body>
+
+</html>

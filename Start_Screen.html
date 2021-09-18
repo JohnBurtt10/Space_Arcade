@@ -1,0 +1,77 @@
+<html>
+
+	<head>
+		<!--Set the defult shape of the html file-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/projects/Space_Arcade/styles.css" rel="stylesheet">
+		
+		<script>
+			//Get and store the username or look for a saved username
+			window.playername = '{{username}}' || localStorage.getItem('playername');
+		</script>
+		<script src='/projects/Space_Arcade/script.js'></script>
+	</head>
+
+	<body onload='load()'>
+		<!--Title-->
+		<h1>Space Arcade</h1>
+
+		<!--Created by-->
+		<p2> Created by Evan Hall and John Burtt </p2>
+
+		<!--Space ship image-->
+		<img id='logo' src="Assets/Rocket_Image.png">
+
+		<div class="center">
+			{{^private}} <!--not signed in-->
+				<!--Usernname input-->
+				<input type="text" id="name" placeholder='Enter name here (max. 10 characters)'>
+				<!--Password input-->
+				<input type="password" id="password" placeholder='Enter password (if not guest)'>
+			{{/private}}
+			
+			{{#private}}<!--signed in-->
+				<h2>Welcome back! {{username}}</h2>
+			{{/private}}
+		</div>
+
+		<!--All signin and play buttons-->
+		<div class="middle">
+			{{^private}}
+				<button onclick='playAsGuest()'>Play As Guest</button>
+				<button onclick='createAccount()'>Create Account</button>
+				<button onclick='login()'>Log In</button>
+			{{/private}}
+			
+			{{#private}}
+				<button onclick='gameMenu()'>Play</button>
+				<button onclick='logout()'>Log Out</button>
+			{{/private}}
+		</div>
+		
+		<!--all infomrative buttons-->
+		<div class="middle">
+			<!--Link to the controls-->
+			<a href="/~/projects/Space_Arcade/Controls">
+				<button>Controls</button>
+			</a>
+
+			<!--Link to the leaderboard-->
+			<a <!-- href="/~/projects/Space_Arcade/Space_Race/Space_Race_Leaderboard"> 
+				<button>Leaderboards</button>
+			</a> 
+			
+			<!--Link to the news-->
+			<a href="/~/projects/Space_Arcade/News">
+				<button>News</button>
+			</a>
+			
+		<!--Link to the feedback-->
+			<a href="/~/projects/Space_Arcade/Feedback">
+				<button>Feedback</button>
+			</a>
+		</div>
+		
+	</body>
+	
+</html>

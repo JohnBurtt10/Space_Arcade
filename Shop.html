@@ -1,0 +1,134 @@
+<html>
+
+	<head>
+		<!--Set the defult shape of the htyml file-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/~/projects/Space_Arcade/styles.css" rel="stylesheet">
+		<script src='/~/projects/Space_Arcade/script.js'></script>
+
+		<script>
+			window.onload = function () {
+				const isLoggedIn = localStorage.getItem('isLoggedIn');
+				const oldBalance = localStorage.getItem('balance');
+				const newBalance = oldBalance || 0;
+				if (isLoggedIn == 'true') {
+					document.getElementById('output')
+						.innerHTML = "You have " + "<img src='/~/projects/Space_Arcade/Assets/Space_Dollar.png' width='16' height='16'>" + " " + newBalance;
+				} else {
+					document.getElementById('output')
+						.innerHTML = "Sign in to earn and spend Space Dollars!";
+				}
+
+				 const redShipSkinPurchased = localStorage.getItem('redShipSkinPurchased');
+				if (redShipSkinPurchased == 'true') {
+					document.getElementById('redShipSkinPrice')
+						.innerHTML = "<span style='color:grey'>owned</span>";
+				} else {
+					document.getElementById('redShipSkinPrice')
+						.innerHTML = "<img src='/~/projects/Space_Arcade/Assets/Space_Dollar.png' width='16' height='16'>" + " " + "250";
+				}
+				const blueShipSkinPurchased = localStorage.getItem('blueShipSkinPurchased');
+				if (blueShipSkinPurchased == 'true') {
+					document.getElementById('blueShipSkinPrice')
+						.innerHTML = "<span style='color:grey'>owned</span>";
+				} else {
+					document.getElementById('blueShipSkinPrice')
+						.innerHTML = "<img src='/~/projects/Space_Arcade/Assets/Space_Dollar.png' width='16' height='16'>" + " " + "250";
+				}
+				const yellowShipSkinPurchased = localStorage.getItem('yellowShipSkinPurchased');
+				if (yellowShipSkinPurchased == 'true') {
+					document.getElementById('yellowShipSkinPrice')
+						.innerHTML = "<span style='color:grey'>owned</span>";
+				} else {
+					document.getElementById('yellowShipSkinPrice')
+						.innerHTML = "<img src='/~/projects/Space_Arcade/Assets/Space_Dollar.png' width='16' height='16'>" + " " + "250";
+				}  
+				const redAsteroidSkinPurchased = localStorage.getItem('redAsteroidSkinPurchased');
+				if (redAsteroidSkinPurchased == 'true') {
+					document.getElementById('redAsteroidSkinPrice')
+						.innerHTML = "<span style='color:grey'>owned</span>";
+				} else {
+					document.getElementById('redAsteroidSkinPrice')
+						.innerHTML = "<img src='/~/projects/Space_Arcade/Assets/Space_Dollar.png' width='16' height='16'>" + " " + "250";
+				}
+				const blueAsteroidSkinPurchased = localStorage.getItem('blueAsteroidSkinPurchased');
+				if (blueAsteroidSkinPurchased == 'true') {
+					document.getElementById('blueAsteroidSkinPrice')
+						.innerHTML = "<span style='color:grey'>owned</span>";
+				} else {
+					document.getElementById('blueAsteroidSkinPrice')
+						.innerHTML = "<img src='/~/projects/Space_Arcade/Assets/Space_Dollar.png' width='16' height='16'>" + " " + "250";
+				}
+				const yellowAsteroidSkinPurchased = localStorage.getItem('yellowAsteroidSkinPurchased');
+				if (yellowAsteroidSkinPurchased == 'true') {
+					document.getElementById('yellowAsteroidSkinPrice')
+						.innerHTML = "<span style='color:grey'>owned</span>";
+				} else {
+					document.getElementById('yellowAsteroidSkinPrice')
+						.innerHTML = "<img src='/~/projects/Space_Arcade/Assets/Space_Dollar.png' width='16' height='16'>" + " " + "250";
+				}
+			};
+
+		</script>
+	</head>
+
+	<body>
+		<p2 id="output"></p2>
+		<h1><b>CHOOSE A SHIP COLOUR</b></h1>
+
+
+		<!--	//<div class="middle">
+		Space ship image
+		<img id='water_bottle' src="water_bottle.png"> -->
+		<div class="row">
+			<div class="button-wrapper">
+				<center>
+					<input class="redButton" type="button" id="blue" onclick='buyItem("Ship", "red", 250)'>
+					<p id="redShipSkinPrice"></p>
+				</center>
+			</div>
+			<div class="button-wrapper">
+				<center>
+					<input class="blueButton" type="button" id="blue" onclick='buyItem("Ship", "blue", 250)'>
+					<p id="blueShipSkinPrice"></p>
+				</center>
+			</div>
+			<div class="button-wrapper">
+				<center>
+					<input class="yellowButton" type="button" id="blue" onclick='buyItem("Ship", "yellow", 250)'>
+					<p id="yellowShipSkinPrice"></p>
+				</center>
+			</div>
+		</div>
+
+		<h1><b>CHOOSE ASTEROID COLOUR</b></h1>
+
+
+	<div class="row">
+			<div class="button-wrapper">
+				<center>
+					<input class="redButton" type="button" id="blue" onclick='buyItem("Asteroid", "red", 250)'>
+					<p id="redAsteroidSkinPrice"></p>
+				</center>
+			</div>
+			<div class="button-wrapper">
+				<center>
+					<input class="blueButton" type="button" id="blue" onclick='buyItem("Asteroid", "blue", 250)'>
+					<p id="blueAsteroidSkinPrice"></p>
+				</center>
+			</div>
+			<div class="button-wrapper">
+				<center>
+					<input class="yellowButton" type="button" id="blue" onclick='buyItem("Asteroid", "yellow", 250)'>
+					<p id="yellowAsteroidSkinPrice"></p>
+				</center>
+			</div>
+		</div>
+
+		<br>
+		<button onclick='gameMenu()'>Back</button>
+
+
+	</body>
+
+</html>

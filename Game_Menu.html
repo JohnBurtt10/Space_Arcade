@@ -1,0 +1,36 @@
+<html>
+
+	<head>
+		<!--Set the defult shape of the html file-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="styles.css" rel="stylesheet">
+		<script src='script.js'></script>
+	</head>
+	<script> 
+		var oldBalance = localStorage.getItem('balance'); //getting the player balance
+		var newBalance = oldBalance || 0; //If null then change value to zero
+	</script>
+
+	<body onload='load()'>
+		<!--Title-->
+		<h1><b>SELECT A GAME MODE</b></h1> 
+		<!--Display the player balance-->
+		<div class="right">
+			<img src='/~/projects/Space_Arcade/Assets/Space_Dollar.png' width='16' height='16'>
+			<script>document.write(newBalance)</script></div>
+
+		<div class="middle">
+			<!--'Space Race' game button-->
+			<input type = "image" id = "space_race" src="Assets/Space_Race_Art.png" onclick='playSpaceRace()'>  
+			<!--'HOT!' gamebutton-->
+			<input type = "image" id = "hot!" src="Assets/Hot_Art.png" onclick='playHot()'>  
+			<!--'Zapped' game button-->
+			<input type = "image" id = "Zapped" src="Assets/Zapped_Art.png" onclick='playZapped()'>  
+		</div> 
+	
+		<!--Back button-->
+		<br><button onclick='startScreen()'>Back</button>
+
+	</body>
+
+</html>

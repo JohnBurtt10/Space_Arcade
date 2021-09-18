@@ -1,0 +1,44 @@
+<!--Connect everything together-->
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Game</title>   
+	<link href='/~/projects/Space_Arcade/styles.css' rel='stylesheet'>
+	<script src="/~/projects/Space_Arcade/script.js"></script>
+	<script>
+		window.isLoggedIn = !!'{{username}}';
+		window.playername = '{{username}}' || localStorage.getItem('playername');
+	</script>
+</head>
+
+<body>
+	<!--Setting Canvas parameters-->
+	<div class='center'>
+		<canvas id="myCanvas" width="600px" height="800px"></canvas>  
+	</div> 
+
+	<!--Brings you to the instructions-->
+	<div class='right'>
+		<a href="/~/projects/Space_Arcade/Space_Race/Space_Race_Instructions">
+			<button>Instructions</button>
+		</a> 
+		<!--Brings you to the shop-->
+		<a href="/~/projects/Space_Arcade/Shop">
+			<button>Shop</button>
+		</a> 
+	<!--Brings you to the leaderboard-->
+			<a href="/~/projects/Space_Arcade/Space_Race/Space_Race_Leaderboard">
+			<button>Leaderboard</button>
+		</a> 
+	<!--Brings you to the game menu-->
+		<a href="/~/projects/Space_Arcade/Game_Menu">
+			<button>Game Menu</button>
+		</a> 
+		
+	<!--Button for the instructions page --> 
+	</div>
+	
+	<script src="Space_Race.js"></script>
+</body>
+</html>
